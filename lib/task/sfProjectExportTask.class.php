@@ -103,7 +103,6 @@ EOF;
     
     // Unfreeze
     $freeze = new sfProjectUnfreezeTask($this->dispatcher, $this->formatter);
-    $freeze->setCommandApplication($this->commandApplication);
     $freeze->run();
     
   }

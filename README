@@ -1,0 +1,62 @@
+= sfProjectExportPlugin =
+
+The `sfProjectExportPlugin` freezes and export project without .svn folders
+
+== Installation ==
+
+* Install the plugin
+
+version 1.0:
+{{{
+  symfony plugin-install http://plugins.symfony-project.com/sfProjectExportPlugin/branches/symfony-1.0
+}}}
+
+version 1.1:
+{{{
+  symfony plugin-install http://plugins.symfony-project.com/sfProjectExportPlugin/trunk
+}}}
+
+* Clear your cache to enable the autoloading symfony feature to find the new classes
+
+{{{
+  symfony cc
+}}}
+
+=== Available Pake Task Commands ===
+
+* Freeze & Export project without .svn folders
+
+{{{
+symfony project:freeze-export /folder/to/symfony/data/dir /folder/to/export/the/project
+}}}
+
+* You can specify which specific folders or files you want to add with an argument, here is the complete possible list. (optional) Separate options with '+'
+
+Version 1.1
+{{{
+symfony project:freeze-export /folder/to/symfony/data/dir /folder/to/export/the/project cache+uploads+fixtures+doc+test
+}}}
+
+Version 1.0
+{{{
+symfony project:freeze-export /folder/to/export/the/project cache+uploads+fixtures+doc+test+command
+}}}
+
+== Changelog ==
+
+=== 09-05-2007 | 1.2 Trunk ===
+ * Bertrand Zuchuat: for symfony 1.1
+
+=== 09-05-2007 | 1.1.3 Stable ===
+
+ * Bertrand.Zuchuat: Add options
+
+=== 09-04-2007 | 1.1.2 Stable ===
+
+ * Bertrand.Zuchuat: initial release
+ * Pascal.Borreli: wrote README
+ * Bertrand.Zuchuat: removed logs files from processing
+ * Bertrand.Zuchuat: removed upload folder from processing
+ * Bertrand.Zuchuat: removed doc folder from processing
+ * Bertrand.Zuchuat: removed test folder from processing
+ * Bertrand.Zuchuat: removed symfony/symfony.php file (root folder) from processing
